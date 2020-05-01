@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Capacity Planner Automation Testing Sanity TestSuite">
+
+<listeners>
+	<!-- <listener class-name="com.ibm.cpt.Analyzer.MyTransformer" /> -->
+	<listener class-name="com.ibm.cpt.extentReport.ExtentReporterNG" />
+</listeners>
+
+	<test thread-count="5" name="Capacity Planner Automation Testing sanity Test">
+	
+		<groups>
+			<!-- FieldValidation, Regression, Sanity,Smoke -->
+			<run>
+				<include name="Sanity"></include>
+			</run>
+		</groups>
+		
+		<classes>
+			<class name="com.ibm.cpt.loginModule.TC01_loginPageTest" /> 
+<!-- 			<class name="com.ibm.cpt.resourceAvailabilityReportModule.TC02_CountrySelectionValidation" />  -->
+<!-- 			<class name="com.ibm.cpt.resourceAvailabilityReportModule.TC03_ManagerSelectionValidation" />  -->
+		</classes>
+		
+	</test> <!-- Test -->
+</suite> <!-- Automation Testing Sanity Suite -->
+

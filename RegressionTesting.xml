@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Capacity Planner Automation Regression TestSuite">
+
+<listeners>
+	<!-- <listener class-name="com.ibm.cpt.Analyzer.MyTransformer" /> -->
+	<listener class-name="com.ibm.cpt.extentReport.ExtentReporterNG" />
+</listeners>
+
+  <test thread-count="5" name="Capacity Planner Automation Regression Test">
+  
+	<groups>
+		<!-- FieldValidation, Regression, Sanity,Smoke -->
+		<run>
+			<include name="Regression"></include>
+		</run>
+	</groups>
+	
+    <classes>
+      <class name="com.ibm.cpt.resourceAvailabilityReportModule.TC02_CountrySelectionValidation"/>
+<!--       <class name="com.ibm.cpt.resourceAvailabilityReportModule.TC03_ManagerSelectionValidation"/> -->
+    </classes>
+    
+  </test> <!-- Capacity Planner Automation Test -->
+</suite> <!-- Capacity Planner Automation TestSuite -->
